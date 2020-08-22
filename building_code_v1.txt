@@ -71,68 +71,6 @@ print(lg)
 
 
 
-#COORDINATES FOR SMALLER BUILDING b1
-b1=[0.4,-2,0.4,-5,2.5,-5,2.5,-2]
-#coordinates for big building
-b2=[4,0,4,-5,7,-5,7,0]
-s_pt_x=-3.5
-s_pt_y=1
-
-w1=b1[6]-b1[0]
-if w1<0:
-    w1*=(-1) #if in case this is negative
-else:
-    pass
-print("this is width of b1")
-print(w1)
-w2=b2[6]-b2[0]
-if w2<0:
-    w2*=(-1)
-else:
-    pass
-print("this is width of b2")
-print(w2)
-
-h_b1=b1[3]-b1[1]
-if h_b1<0:
-    h_b1*=(-1)
-else:
-    pass
-print("this is height of b1")
-print(h_b1)
-h_b2=b2[3]-b2[1]
-if h_b2<0:
-    h_b2*=(-1)
-else:
-    pass
-
-print("this is height of b2")
-print(h_b2)
-
-h_diff=b2[0]-b1[6] #hori dist bet two buildings
-v_diff=h_b2-h_b1 #verti dist between two buildings
-
-x_di_sun_edg=b1[6]-s_pt_x #triangle1 adj
-print("t1adj"+str(x_di_sun_edg))
-
-sun_h_b1=s_pt_y-b1[1]   #t1 oppo or height of sun from small building
-print("height of sun from top of small building "+str(sun_h_b1))
-multiplier=sun_h_b1/x_di_sun_edg
-print("this is multiplier")
-print(multiplier)
-print("this is oppo of 2nd tr")
-print(h_diff*multiplier)
-print("this is diffrence in height")
-print(v_diff)
-lg=((h_diff*multiplier)+v_diff+(w2))
-print("total lighted area is :")
-print(lg)
-
-
-
-
-
-
 
 
 
