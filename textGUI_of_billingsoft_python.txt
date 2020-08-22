@@ -1,0 +1,112 @@
+from tkinter import *
+##class for heading
+class Bill_App:
+    def __init__(self,root):
+        self.root=root
+        self.root.geometry("1500x700+0+0")
+        self.root.title("Customer Bill")
+        blue_colr="#595959"
+        red_colr="#FF0000"
+        title=Label(self.root,text="Customer Bill",bd=12,relief=RIDGE,
+            bg=blue_colr,fg="white",font=("calibary",25,"bold")).pack(fill=X)
+        #.......customer data..........#
+
+        frame_1=LabelFrame(self.root,text="CUSTOMER DATA",relief=RIDGE,bd=10,font=("bookman",10,"bold"),fg="white",bg=blue_colr)
+        frame_1.place(x=0,y=75,relwidth=1)
+
+        #........cust name and entry of name....#
+
+        cust_name=Label(frame_1,text="CUSTOMER NAME :",font=("bookman",15,"bold"),fg="white",bg=blue_colr).grid(row=0,column=1,padx=2, pady=5)
+        cust_txt=Entry(frame_1,width=20,font="roboto 16").grid(row=0,column=2,pady=5)
+
+        # ........cust mobile no and entry of number....#
+
+        cust_mob = Label(frame_1, text="MOBILE NO :", font=("bookman", 15, "bold"), fg="white", bg=blue_colr).grid(row=0,column=3, padx=2, pady=5)
+        cust_mob_no = Entry(frame_1, width=15, font="roboto 16").grid(row=0, column=4,pady=5,padx=2)
+
+        # ........cust email and entry of email....#
+
+        cust_mail = Label(frame_1, text="EMAIL ID :", font=("bookman", 15, "bold"), fg="white", bg=blue_colr).grid(row=0, column=5, padx=2, pady=5)
+
+        cust_mail_id = Entry(frame_1, width=25, font="roboto 16").grid(row=0, column=6,pady=5)
+
+        bill_button=Button(frame_1,text="search",width=12,bd=7,font="roboto 12 bold").grid(row=0,column=7,padx=20, pady=5)
+
+         #............stationary type.............#
+
+        frame_2 = LabelFrame(self.root, text="STATIONARY TYPE", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        frame_2.place(x=9, y=170, width=500,height=380)
+
+        #product names#
+        ITEM1=Label(frame_2,text="PRODUCT NAME ",font=("bookman",15,"bold"),fg="white",width=25,bg=red_colr,relief=RIDGE, bd=6).grid(row=0,column=1,padx=5,pady=5)
+        ITEM2=Label(frame_2,text="Notebook ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=1,column=1, padx=5,pady=5)
+        ITEM3=Label(frame_2,text="Pen ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=2,column=1, padx=5,pady=5)
+        ITEM4=Label(frame_2,text="Pencil ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=3,column=1, padx=5,pady=5)
+        ITEM5=Label(frame_2,text="Drawing book ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=4,column=1, padx=5,pady=5)
+        ITEM6=Label(frame_2,text="Colors ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=5,column=1, padx=5,pady=5)
+        ITEM7=Label(frame_2,text="Gum ",font=("bookman",15,"bold"),fg="BLACK",width=25,bg="YELLOW",relief=RIDGE, bd=6).grid(row=6,column=1, padx=5,pady=5)
+        ITEM7=Label(frame_2,text="Quantity",font=("bookman",15,"bold"),fg="white",width=10,bg=red_colr,relief=RIDGE, bd=6).grid(row=0,column=2, padx=5,pady=5)
+
+        #...............quantity....#
+        qty1= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=1,column=2, padx=5,pady=5)
+        qty2= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=2,column=2, padx=5,pady=5)
+        qty3= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=3,column=2, padx=5,pady=5)
+        qty4= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=4,column=2, padx=5,pady=5)
+        qty5= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=5,column=2, padx=5,pady=5)
+        qty6= Entry(frame_2,font=("bookman",15,"bold"),fg="BLACK",width=10,bg="white",relief=RIDGE, bd=4).grid(row=6,column=2, padx=5,pady=5)
+
+        # ............stationary TOTAL.............#
+        frame_3= LabelFrame(self.root, text="TOTAL", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        frame_3.place(x=520, y=170, width=300, height=380)
+
+        totc1=Label(frame_3,text="Total",font=("bookman",15,"bold"),fg="white",width=15,bg=red_colr,relief=RIDGE, bd=6).grid(row=0,column=0, padx=50,pady=5)
+        totc2=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=1,column=0, padx=50,pady=5)
+        totc3=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=2,column=0, padx=50,pady=5)
+        totc4=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=3,column=0, padx=50,pady=5)
+        totc5=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=4,column=0, padx=50,pady=5)
+        totc6=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=5,column=0, padx=50,pady=5)
+        totc7=Entry(frame_3,font=("bookman",15,"bold"),fg="BLACK",width=15,bg="white",relief=RIDGE, bd=6).grid(row=6,column=0, padx=50,pady=5)
+
+
+
+        # ............stationary TOTAL BILL WITH HIS DATA ON IT.............#
+        frame_4= LabelFrame(self.root, text="CUSTOMER BILL", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        frame_4.place(x=833, y=170, width=515, height=380)
+
+        #..........tax.........#
+
+        frame_bottom = LabelFrame(self.root, text="Taxes", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        frame_bottom.place(x=9, y=560, width=500, height=120)
+        gst = Label(frame_bottom,text="GST :",font=("bookman", 15, "bold"), fg="white", width=5, bg=blue_colr,  bd=6).grid(row=0, column=0, padx=30, pady=0)
+        gstshow = Label(frame_bottom,font=("bookman", 10, "bold"), fg="white", width=15, bg="white", relief=RIDGE, bd=6).grid(row=0, column=1, padx=70, pady=2)
+        discount=Label(frame_bottom,text="Discount",font=("bookman",15,"bold"),fg="white",width=10,bg=blue_colr,bd=6).grid(row=1, column=0, padx=30, pady=0)
+        discounttshow = Label(frame_bottom,font=("bookman", 10, "bold"), fg="white", width=15, bg="white", relief=RIDGE, bd=6).grid(row=1, column=1, padx=70, pady=2)
+
+        #........total........#
+        frame_tot = LabelFrame(self.root, text="TOTAL", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        frame_tot.place(x=520, y=560, width=300, height=120)
+        #total_lable.........#
+        total = Label(frame_tot,text="Total (Rs.)",font=("bookman", 12, "bold"), fg="BLACK", width=14, bg="white", relief=RIDGE, bd=6).grid(row=0, column=0, padx=5, pady=5)
+        gross_total = Label(frame_tot,text="Gross Total (Rs.)",font=("bookman", 12, "bold"), fg="BLACK", width=14, bg="white", relief=RIDGE, bd=6).grid(row=1, column=0, padx=5, pady=5)
+         #.......output....#   not modified yet
+        totalop=Entry(frame_tot,font=("bookman",12,"bold"),fg="BLACK",width=8,bg="white",relief=RIDGE, bd=6).grid(row=0,column=1, padx=8,pady=5)
+        gross_totalop=Entry(frame_tot,font=("bookman",12,"bold"),fg="BLACK",width=8,bg="white",relief=RIDGE, bd=6).grid(row=1,column=1, padx=8,pady=5)
+
+
+        #........empty frame.......#
+        eframe= LabelFrame(self.root, text="Software Developer details ", relief=RIDGE, bd=10, font=("bookman", 15, "bold"), fg="white", bg=blue_colr)
+        eframe.place(x=833, y=560, width=515, height=120)
+
+        developerdata = Label(eframe,text="Name: Aniket Rajgure",font=("italic", 15, "bold"), fg="BLACK", width=20, bg=blue_colr ).grid(row=0, column=0, padx=10, pady=5)
+        developermob = Label(eframe,text="Contact number : 7507760984",font=("italic", 15, "bold"), fg="BLACK", width=30,bg=blue_colr  ).grid(row=1, column=0, padx=15, pady=0)
+
+
+
+
+
+
+
+root =Tk()
+obj =Bill_App(root)
+root.mainloop()
+
